@@ -68,7 +68,7 @@ def upload():
     secure_name = secure_filename(filename)
     # Left in for debugging purposes. If you comment this back in, the data
     # will be saved to the local file system.
-    with open(secure_name, 'wb') as f:
+    with open(os.path.join('data', secure_name), 'wb') as f:
         f.write(audio_data)
 
     if storage:
