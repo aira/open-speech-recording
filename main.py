@@ -17,6 +17,7 @@ import uuid
 app = Flask(__name__)
 
 # Configure environment variables via app.yaml for deployment to Google Cloud Services
+FLASK_PORT = 80  # for debug it's 5000
 # Flask keys are typically 24-31 characters long and can be any ascii character, but most examples are just a-f and 0-9
 # Django keys are only printable ASCII characters and all seem to be 50 characters long
 SESSION_SECRET_KEY_LEN = 30  # DJANGO = 50
@@ -100,4 +101,4 @@ app.jinja_env.globals['csrf_token'] = generate_csrf_token
 app.secret_key = SESSION_SECRET_KEY
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=FLASK_PORT, debug=False)
