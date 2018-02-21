@@ -5,3 +5,4 @@ lib/
 app.yaml
 *private*
 *secret*
+*.ogg
