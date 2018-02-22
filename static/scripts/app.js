@@ -180,11 +180,11 @@ function visualize(stream) {
 
 var wantedWords = [
   'Hey Chloe',
-  'Stealth Mode',
-  'Hey Chloe',
+  // 'Stealth Mode',
   'Tell Me',
   'Hey Chloe',
   'More',
+  'Hay Chloe',
   'Thank You',
   'Please',
   'Read',
